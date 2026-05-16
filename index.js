@@ -3,9 +3,6 @@ const nom = document.getElementById("nom");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const btn = document.getElementById("btn");
-document.getElementById("logout-btn").addEventListener("click", () => {
-    showPage('page-login');
-});
 
 btn.addEventListener("click", () => {
     const nomVal = nom.value;
