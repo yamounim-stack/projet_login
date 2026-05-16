@@ -1,32 +1,85 @@
-h1{
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
 }
 
-body{
-    height: 100vh;
+.page {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    gap: 60px; /* Espace entre les deux formulaires */
+    padding: 20px;
 }
-.form input{
-    padding: 10px;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
 }
-.form button{
-    padding: 10px 20px;
+
+.form input:focus {
+    border-color: #007BFF;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
     border: none;
     background-color: #007BFF;
     color: white;
     border-radius: 5px;
+    font-size: 0.95rem;
     cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.switch {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.switch span {
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch span:hover {
+    text-decoration: underline;
 }
