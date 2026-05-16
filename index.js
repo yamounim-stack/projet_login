@@ -16,7 +16,7 @@ btn.addEventListener("click", () => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     users.push({ nom: nomVal, mail: mailVal, pass: passVal });
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Inscription réussie ! nom: " + nomVal + " email: " + mailVal);
+    showPage('page-welcome');
 });
 
 
@@ -29,23 +29,23 @@ loginBtn.addEventListener("click", () => {
     const mailVal = loginEmail.value;
     const passVal = loginPassword.value;
 
-    // 1. Vérifier que les champs ne sont pas vides
     if (!mailVal || !passVal) {
         return alert("Veuillez remplir tous les champs");
     }
 
-    // 2. Récupérer la liste des users depuis localStorage
     const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // 3. Chercher un user qui correspond à l'email ET au mot de passe
     const userTrouve = users.find(u => u.mail === mailVal && u.pass === passVal);
 
-    // 4. Si trouvé => connexion réussie, sinon => erreur
     if (userTrouve) {
         showPage('page-welcome');
     } else {
-
-        showPage('page-welcome');
-
+        alert("Email ou mot de passe incorrect");
     }
 });
+
+
+// ---- NAVIGATION ----
+function showPage(id) {
+    document.querySelectorAll('.form').forEach(f => f.parentElement.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}

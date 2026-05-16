@@ -7,29 +7,33 @@
     <title>LOGIN - PAGE</title>
 </head>
 <body>
-     <div class="form">
-        <h1> Sign up</h1>
-        <input id="nom" placeholder="entrer votre nom : " type="text">
-        <input id="email" placeholder="entrer votre email : " type="email">
-        <input id="password" placeholder="entrer votre mot de passe : " type="password">
-        <button id="btn">S'inscrire</button>
+     <div id="div-signup">
+        <div class="form">
+            <h1>Sign up</h1>
+            <input id="nom" placeholder="entrer votre nom : " type="text">
+            <input id="email" placeholder="entrer votre email : " type="email">
+            <input id="password" placeholder="entrer votre mot de passe : " type="password">
+            <button id="btn">S'inscrire</button>
+        </div>
      </div>
 
-     <div class="form">
-        <h1> Login</h1>
-        <input id="login-email" placeholder="entrer votre email : " type="email">
-        <input id="login-password" placeholder="entrer votre mot de passe : " type="password">
-        <button id="login-btn">Se connecter</button>
+     <div id="div-login">
+        <div class="form">
+            <h1>Login</h1>
+            <input id="login-email" placeholder="entrer votre email : " type="email">
+            <input id="login-password" placeholder="entrer votre mot de passe : " type="password">
+            <button id="login-btn">Se connecter</button>
+        </div>
      </div>
-     <!-- PAGE BIENVENUE -->
-    <div class="page" id="page-welcome" style="display:none">
-    <div class="form">
-        <h1>🎉</h1>
-        <h2>Bienvenue sur le site de Yassmine !</h2>
-        <p>Vous êtes connecté avec succès.</p>
-       <button onclick="showPage('page-login')">Se déconnecter</button>
-    </div>
-</div>
+
+     <div id="page-welcome" style="display:none">
+        <div class="form">
+            <h1>🎉</h1>
+            <h2>Bienvenue sur le site de Yassmine !</h2>
+            <p>Vous êtes connecté avec succès.</p>
+            <button onclick="location.reload()">Se déconnecter</button>
+        </div>
+     </div>
 
      <script src="./index.js"></script>
 </body>
