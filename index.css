@@ -3,89 +3,82 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: aliceblue;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;    /* ← ajoute juste cette ligne */
-    padding: 20px;      /* ← et celle-ci */
-}
-
-.page {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    background-color: #eef2ff;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    background-color: white;
+    gap: 14px;
+    background-color: #ffffff;
     padding: 40px 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border-top: 5px solid #4f46e5;
     width: 100%;
-    max-width: 360px;
+    max-width: 340px;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 5px;
-    font-size: 1.6rem;
-    color: #222;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 6px;
 }
 
 .form input {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 11px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
     font-size: 0.9rem;
+    font-family: Arial, sans-serif;
     outline: none;
+    color: #111;
+    background-color: #f9fafb;
     transition: border-color 0.2s;
 }
 
+.form input::placeholder {
+    color: #9ca3af;
+}
+
 .form input:focus {
-    border-color: #007BFF;
+    border-color: #4f46e5;
+    background-color: #fff;
 }
 
 .form button {
     width: 100%;
-    padding: 10px;
+    padding: 11px;
     border: none;
-    background-color: #007BFF;
+    background-color: #4f46e5;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 5px;
-    transition: background-color 0.2s;
+    margin-top: 4px;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 .form button:hover {
-    background-color: #0056b3;
+    background-color: #4338ca;
 }
 
-.switch {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 5px;
-}
-
-.switch span {
-    color: #007BFF;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.switch span:hover {
-    text-decoration: underline;
+.form button:active {
+    transform: scale(0.98);
 }
