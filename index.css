@@ -3,10 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;    /* ← ajoute juste cette ligne */
+    padding: 20px;      /* ← et celle-ci */
 }
 
 .page {
